@@ -2,14 +2,14 @@ header {
     width:60%;
     margin-left: 20%;
 }
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1500px) {
     header {
         width: 76%;
         margin-left:12%;
     }
     
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1200px) {
     header {
         width: 90%;
         margin-left:5%;
