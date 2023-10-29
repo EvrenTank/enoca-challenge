@@ -8,8 +8,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderFirstSectionComponent } from './header-first-section/header-first-section.component';
 import { MatIconModule } from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule} from '@angular/material/button';
 import { RightsideNavbarComponent } from './rightside-navbar/rightside-navbar.component';
+import { CarouselComponentComponent } from './carousel-component/carousel-component.component';
+import { CarouselModule } from '@coreui/angular';
+import { HttpClientModule } from '@angular/common/http';
+import { CarouselContentComponent } from './carousel-content/carousel-content.component';
+import { AllnewsPageComponent } from './allnews-page/allnews-page.component';
+
 
 @NgModule({
   declarations: [
@@ -18,14 +24,19 @@ import { RightsideNavbarComponent } from './rightside-navbar/rightside-navbar.co
     HeaderComponent,
     NavbarComponent,
     HeaderFirstSectionComponent,
-    RightsideNavbarComponent
+    RightsideNavbarComponent,
+    CarouselComponentComponent,
+    CarouselContentComponent,
+    AllnewsPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    CarouselModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

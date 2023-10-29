@@ -1,0 +1,35 @@
+<div class="carousel">
+    <div class="carousel-indicators">
+        <span (click)="chooseIndex(0)" [style.backgroundColor]="index == 0 ? 'red':'rgba(150,150,150)' "
+        ></span>
+        <span (click)="chooseIndex(1)" [style.backgroundColor]="index == 1 ? 'red':'rgba(150,150,150)' "
+       ></span>
+        <span (click)="chooseIndex(2)" [style.backgroundColor]="index == 2 ? 'red':'rgba(150,150,150)' " 
+       ></span>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item" 
+        [style]="index == 0 ? 'opacity:1;z-index:10' : 'opacity:0;z-index:0'" >
+         <app-carousel-content [haberVerisi]="news.articles[0]"></app-carousel-content>
+    </div>
+        <div class="carousel-item"
+        [style]="index == 1 ? 'opacity:1;z-index:10' : 'opacity:0;z-index:0' ">
+        <app-carousel-content [haberVerisi]="news.articles[1]"></app-carousel-content>
+    </div>
+        <div class="carousel-item"
+        [style]="index == 2 ? 'opacity:1;z-index:10' : 'opacity:0;z-index:0' " >
+        <app-carousel-content [haberVerisi]="news.articles[2]"></app-carousel-content>
+    </div>
+
+    </div>
+    <div class="carousel-previous" (click)="decreaseIndex()">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+    </div>
+    <div class="carousel-next" (click)="increaseIndex()">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+    </div>
+
+</div>
+<script>
+   
+</script>

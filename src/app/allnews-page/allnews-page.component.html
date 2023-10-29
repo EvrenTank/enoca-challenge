@@ -1,0 +1,26 @@
+<div class="containerDiv">
+    <h3>Tüm Haberler:</h3>
+    <ul class="myList">
+        <li class="listElements" *ngFor="let item of news.articles.slice(3+(myIndex*10),(myIndex*10)+13)">
+            <div class="content">
+                <div class="author">
+                    <span>{{item.author}}</span>
+                </div>
+                <div class="details">
+                    <h3 class="contentTitle">{{item.title}}</h3>
+                    <p> Haberi okumak için <a [href]="item.url">tıklayınız.</a></p>
+                    <small class="date">Yayınlanma Tarihi:{{item.publishedAt}}</small>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="pageNumberSelector">
+        <li class="pageNumbers" *ngFor="let index of createRange(news.articles.length);">
+            <span (click)="setMyIndex(index-1)"
+             [style]="myIndex == (index-1) ? 'backgroundColor:rgba(150,150,150,0.7)' : 'backgroundColor:rgba(150,150,150,0.3)' " >{{index}}</span>
+        </li>
+    </ul>
+
+
+</div>
