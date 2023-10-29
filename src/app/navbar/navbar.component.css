@@ -1,0 +1,25 @@
+.navbarMaindiv .navbarList {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-between;
+    list-style-type: none;
+    color:black;
+}
+.navbarMaindiv .navbarList li  {
+    margin: 0;
+    padding: 0; 
+}
+
+.navbarMaindiv .navbarList li a {
+    color:black;
+    text-transform: none;
+    text-decoration: none;
+}
+@media screen and (max-width:1000px) {
+   
+    .navbarMaindiv {
+        display: none;
+    }
+    
+}

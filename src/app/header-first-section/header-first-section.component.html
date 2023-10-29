@@ -1,0 +1,23 @@
+<div id='mainDiv'>
+    <div id="nameHolder">
+        <span class="nameSpan">EVREN TANIK</span>
+    </div>
+    <div id="searchHolder">
+        <span>
+            <a href="/"><img width='20' height="20" src="../assets/facebook.png"/></a>
+        </span>
+        <span>
+            <a href="/"><img width='20' height="20" src="../assets/instagram.png"/></a>
+        </span>
+        <span>
+        <a href="/"><img width='20' height="20" src="../assets/twitter.png"/></a>
+        </span>
+        <input class="searchInput" type="text" placeholder="Search ..."/>
+        <button class = "searchButton" mat-fab>
+            <mat-icon  class="searchIcon"  >search</mat-icon>
+          </button>
+    </div>
+    <button class="menuButton" mat-mini-fab color="primary" (click)="myEvent.emit()">
+        <mat-icon>menu</mat-icon>
+      </button>
+</div>

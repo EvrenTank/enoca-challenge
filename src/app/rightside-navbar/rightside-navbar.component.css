@@ -1,0 +1,52 @@
+.rightnavbarMaindiv{
+    position: fixed;
+    right:0;
+    top:0;
+    height:100vh;
+    width: 300px;    
+    background-color: white;
+    box-shadow: -1px -1px 5px gray;
+    transform: translateX(300px);
+    transition: 0.5s linear;
+}
+.visible{
+    background-color:red;
+}
+.rightnavbarMaindiv .closeButton{
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+
+.rightnavbarMaindiv .rightnavbarList {
+    height:100%;
+    display: flex;
+    padding-top: 80px;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style-type: none;
+    gap:35px;
+    color:black;
+}
+.rightnavbarMaindiv .rightnavbarList li  {
+    margin: 0;
+    padding: 0; 
+}
+
+.rightnavbarMaindiv .rightnavbarList li a {
+    color:black;
+    text-transform: none;
+    text-decoration: none;
+    font-size: larger;
+    font-weight:500;
+}
+.rightnavbarMaindiv .rightnavbarList li a:hover {
+    color:yellowgreen;
+
+}
+@media screen and (max-width:1000px) {
+   
+    .rightnavbarMaindiv {
+    }
+    
+}
