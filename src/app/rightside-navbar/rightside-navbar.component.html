@@ -1,15 +1,15 @@
 <div class="rightnavbarMaindiv" [style]="data">
     <ul class="rightnavbarList">
-        <li><a href="/">HOME</a></li>
-        <li><a href="/">CATEGORIES</a></li>
-        <li><a href="/">BUSINESS</a></li>
-        <li><a href="/">ENTERTAINMENT</a></li>
-        <li><a href="/">GENERAL</a></li>
-        <li><a href="/">HEALTH</a></li>
-        <li><a href="/">SCIENCE</a></li>
-        <li><a href="/">SPORTS</a></li>
-        <li><a href="/">TECHNOLOGY</a></li>
-        <li><a href="/">ABOUT</a></li>
+        <li><a routerLink="/home" [style.color]="categoryname == 'home' ? 'yellowgreen':'black'">HOME</a></li>
+        <li><a routerLink="/categories/" [style.color]="categoryname == 'categories' ? 'yellowgreen':'black'">CATEGORIES</a></li>
+        <li><a routerLink="/category/business"  [style.color]="categoryname == 'business' ? 'yellowgreen':'black'">BUSINESS</a></li>
+        <li><a routerLink="/category/entertainment"  [style.color]="categoryname == 'entertainment' ? 'yellowgreen':'black'">ENTERTAINMENT</a></li>
+        <li><a routerLink="/category/general"  [style.color]="categoryname == 'general' ? 'yellowgreen':'black'">GENERAL</a></li>
+        <li><a routerLink="/category/health"  [style.color]="categoryname == 'health' ? 'yellowgreen':'black'">HEALTH</a></li>
+        <li><a routerLink="/category/science"  [style.color]="categoryname == 'science' ? 'yellowgreen':'black'">SCIENCE</a></li>
+        <li><a routerLink="/category/sport"  [style.color]="categoryname == 'sport' ? 'yellowgreen':'black'">SPORT</a></li>
+        <li><a routerLink="/category/technology"  [style.color]="categoryname == 'technology' ? 'yellowgreen':'black'">TECHNOLOGY</a></li>
+        <li><a routerLink="/about" [style.color]="categoryname == 'about' ? 'yellowgreen':'black'">ABOUT</a></li>
     </ul>
     <button class="closeButton" mat-mini-fab (click)="dataChanged.emit()">
         <mat-icon >clear</mat-icon>

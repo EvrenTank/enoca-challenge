@@ -12,10 +12,13 @@
         <span>
         <a href="/"><img width='20' height="20" src="../assets/twitter.png"/></a>
         </span>
-        <input class="searchInput" type="text" placeholder="Search ..."/>
-        <button class = "searchButton" mat-fab>
-            <mat-icon  class="searchIcon"  >search</mat-icon>
-          </button>
+        <input class="searchInput" [(ngModel)]="inputValue" type="text" placeholder="Search ..."/>
+        <a [routerLink]="queryText">
+            <button class = "searchButton" (click)="showInputValue()" mat-fab>
+                <mat-icon  class="searchIcon"  >search</mat-icon>
+              </button>
+        </a>
+
     </div>
     <button class="menuButton" mat-mini-fab color="primary" (click)="myEvent.emit()">
         <mat-icon>menu</mat-icon>

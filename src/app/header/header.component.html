@@ -1,11 +1,10 @@
-<header 
->
+<header>
     <div class="nameSection"  >
         <app-header-first-section  (myEvent)="myFunction({transform:'translateX(0px)'})" ></app-header-first-section>
     </div>
     <div class="navbarSection">
-        <app-navbar></app-navbar>
+        <app-navbar [categoryname]="categoryname" ></app-navbar>
     </div>
-    <app-rightside-navbar [data]="parentData" (dataChanged)="myFunction({transform:'translateX(300px)'})"
-   ></app-rightside-navbar>
+    <app-rightside-navbar [data]="parentData" [categoryname]="categoryname"
+     (dataChanged)="myFunction({transform:'translateX(300px)'})"></app-rightside-navbar>
 </header>

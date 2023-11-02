@@ -1,16 +1,27 @@
-.carouselContainer, .allnewsContainer {
+.containerDiv{
+    display:flex;
+    flex-direction: column;
+  
+}
+.containerDiv .contact{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+
+}
+.containerDiv {
     width:60%;
     margin-left: 20%;
 }
 @media screen and (max-width:1500px) {
-    .carouselContainer, .allnewsContainer {
+    .containerDiv {
         width: 76%;
         margin-left:12%;
     }
     
 }
 @media screen and (max-width:1200px) {
-    .carouselContainer, .allnewsContainer {
+    .containerDiv {
         width: 90%;
         margin-left:5%;
     }

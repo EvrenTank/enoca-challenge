@@ -1,5 +1,4 @@
-import { Component} from '@angular/core';
-
+import { Component,Input} from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -10,5 +9,7 @@ export class HeaderComponent {
   myFunction = (eventData:any) => {
     this.parentData = eventData;
     console.log("metot çalışıyor:", eventData)
-  }    
+  }  
+  @Input() categoryname : any;
+
 }

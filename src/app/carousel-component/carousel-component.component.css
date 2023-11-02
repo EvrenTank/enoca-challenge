@@ -22,6 +22,7 @@
     border-radius: 50%;
     z-index: 3;
     cursor: pointer;
+    transition: 1s;
     }
 .carousel-next {
     height: 50px;
@@ -68,13 +69,13 @@
     transition-duration: 1s;
 }
 .carousel-inner .carousel-item:nth-child(1){
-    background-color: orange;
+    background-color: gainsboro;
 }
 
 .carousel-inner .carousel-item:nth-child(2){
-    background-color: greenyellow;
+    background-color: gainsboro;
 }
 
 .carousel-inner .carousel-item:nth-child(3){
-    background-color: yellow;
+    background-color: gainsboro;
 }

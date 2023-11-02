@@ -15,7 +15,11 @@ import { CarouselModule } from '@coreui/angular';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselContentComponent } from './carousel-content/carousel-content.component';
 import { AllnewsPageComponent } from './allnews-page/allnews-page.component';
-
+import { IndividualPageComponent } from './individual-page/individual-page.component';
+import { CategoriesPageComponent } from './categories-page/categories-page.component';
+import { AramaPageComponent } from './arama-page/arama-page.component';
+import { FormsModule } from '@angular/forms';
+import { AboutPageComponent } from './about-page/about-page.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { AllnewsPageComponent } from './allnews-page/allnews-page.component';
     RightsideNavbarComponent,
     CarouselComponentComponent,
     CarouselContentComponent,
-    AllnewsPageComponent
+    AllnewsPageComponent,
+    IndividualPageComponent,
+    CategoriesPageComponent,
+    AramaPageComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +44,8 @@ import { AllnewsPageComponent } from './allnews-page/allnews-page.component';
     MatIconModule,
     MatButtonModule,
     CarouselModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

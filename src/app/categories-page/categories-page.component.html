@@ -1,0 +1,73 @@
+<app-header [categoryname]="categoryname"></app-header>
+<div class="mainDiv" >
+    <div class="filterDiv">
+        <h3 class="filterDivBaslik">Filtreleme Alanı:</h3>
+        <div class="flexDiv">
+        <div class="genreDiv">
+        <label class="labels" for="genreSelector">Tür Seçiniz:</label>
+        <select class="selector" id="genreSelector" (change)="changeCategory($event)">
+            <option value="hepsi">Hepsi</option>
+            <option value="business">Business</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="general">General</option>
+            <option value="health">Health</option>
+            <option value="science">Science</option>
+            <option value="sport">Sport</option>
+            <option value="technology">Technology</option>
+        </select>
+        </div>
+        <div class="publisherDiv">
+        <label class="labels" for="publisherSelector">Gazete Seçiniz:</label>
+        <select class="selector" id="publisherSelector" (change)="changePublisher($event)">
+            <option value="hepsi">Hepsi</option>
+            <option value="NTV">NTV</option>
+            <option value="Sözcü">Sözcü</option>
+            <option value="Hürriyet">Hürriyet</option>
+            <option value="BorsaGündem">Borsa Gündem</option>
+            <option value="Cumhuriyet">Cumhuriyet</option>
+            <option value="T24">T24</option>
+            <option value="Takvim">Takvim</option>
+            <option value="Fotomaç">Fotomaç</option>
+            <option value="BloombergHT">BloombergHT</option>
+            <option value="Sabah">Sabah</option>
+            <option value="TRTHaber">TRT Haber</option>
+            <option value="Mynet">Mynet</option>
+            <option value="CNNTÜRK">CNN TÜRK</option>
+            <option value="KARAR">KARAR</option>
+            <option value="Milliyet">Milliyet</option>
+            <option value="BirGün">Birgün</option>
+            <option value="Gazete">Gazete</option>
+            <option value="HalkTV">Halk TV</option>
+            <option value="Ensonhaber">Ensonhaber</option>
+            <option value="Onedio">Onedio</option>
+            <option value="Yeniçağ">Yeniçağ</option>
+            <option value="Haber7.com">Haber7.com</option>
+        </select>
+    </div>
+    </div>
+    </div>
+    <div class="containerDiv">
+        <h3 class="containerDivBaslik" >Kategori:  <p style="display:inline-block;font-weight: 300;">{{category==undefined ? "all":category}}</p></h3>
+        <ul class="myList">
+            <li class="listElements" *ngFor="let item of news.slice((myIndex*10),(myIndex*10)+10)">
+                <div class="content">
+                    <div class="author">
+                        <span>{{item.author}}</span>
+                    </div>
+                    <div class="details">
+                        <h3 class="contentTitle" [title]="item.title">{{item.title}}</h3>
+                        <p> Haberi okumak için <a [href]="item.url">tıklayınız.</a></p>
+                        <small class="date">Yayınlanma Tarihi:{{item.publishedAt}}</small>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="pageNumberSelector">
+            <li class="pageNumbers" *ngFor="let index of createRange(news.length);">
+                <span (click)="setMyIndex(index-1)"
+                 [style]="myIndex == (index-1) ? 'backgroundColor:rgba(150,150,150,0.7)' : 'backgroundColor:rgba(150,150,150,0.3)' " >{{index}}</span>
+            </li>
+        </ul>
+    
+    </div>
+</div>

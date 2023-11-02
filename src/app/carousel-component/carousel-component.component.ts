@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './carousel-component.component.html',
   styleUrls: ['./carousel-component.component.css']
 })
-export class CarouselComponentComponent {
+export class CarouselComponentComponent{
   index:number = 0;
   news:any= {};
   increaseIndex():void {
@@ -39,7 +39,11 @@ export class CarouselComponentComponent {
     console.error('API isteği sırasında hata oluştu:', error);
   }
 );
-
+   setInterval(()=>{
+    this.increaseIndex();
+  },5000);
   }
+
+  
 
 }
