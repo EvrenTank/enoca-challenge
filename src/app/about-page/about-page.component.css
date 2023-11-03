@@ -30,16 +30,33 @@
 }
 .proje{
     width: 100%;
-    height: 350px;
+    height: 450px;
     border: 1px solid black;
     display: flex;
     flex-direction: row;
 }
-.proje .subDiv{
+.proje .subDiv1{
+    width: 50%;
+    height:100%;
+    display:flex;
+    flex-direction: row;
+}
+.subDiv1 .subDiv11{
+    width:50%;
+    height: 100%;
+}
+.subDiv1 .subDiv11 img {
+    height:100%;
+    width: 100%;
+}
+.proje .subDiv2{
+    padding-left: 20px;
+    padding-top: 20px;
     width: 50%;
     height:100%;
     display:flex;
     flex-direction: column;
+    gap:20px;
 }
 
 @media screen and (max-width:1500px) {
